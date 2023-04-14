@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      width: 500px;
+      margin: 0 auto;
+      height: 200px;
+      border: 1px solid #ccc;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      align-content: center;
+
+    }
+
+    li {
+      width: 40%;
+      height: 40%;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    创建flex容器 父 display:flex
+    主轴对齐方式 父 justify-context
+    侧轴对齐方式 父 align-items //用于控制单行
+    某个弹性盒子侧轴对齐方式 子 align-self //用于控制单个
+    修改主轴方向 父 flex-direction:column //由水平变垂直
+    弹性伸缩比 子 flex //宽度所占父盒子宽度比例
+    弹性盒子换行 父 flex-wrap:wrap
+    行对齐方式 父 align-content //用于控制多行
+   -->
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+
+</body>
+
+</html>

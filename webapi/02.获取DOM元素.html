@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="dv1">1</div>
+  <div class="dv2">2</div>
+  <div id="dv3">3</div>
+  <script>
+    /*
+     1.document.querySelector('选择器')；获取第一个符合选择器条件的dom元素
+     2.document.querySelectorAll('选择器'): 获取所有符合选择器-的dom元素，返回一个伪数组
+     伪数组：没有数组的方法，但是有长度，可以用for循环遍历
+     3.document.getElementById('id名')：返回唯一dom
+     4.document.getElementByClassName('类名') 返回伪数组
+     5.document.getElementByTagName('标签名')：返回伪数组
+    */
+    console.log(document.getElementById('dv3'))
+
+    //特殊： 获取html标签
+    document.documentElement
+    //特殊： 获取body标签
+    document.body
+  </script>
+</body>
+
+</html>

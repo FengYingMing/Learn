@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      /* 
+       border -top -bottom -left -right
+      */
+      border: 1px solid pink;
+      border-top: 2px solid lime;
+
+      /* 
+       padding -top -bottom -left -right
+       padding: 上 右 下 左
+       用来拉开内容盒子边缘的距离
+      */
+      padding: 5px 10px 2px 15px;
+
+      /* 
+       margin -top -bottom -left -right
+       margin: 上 右 下 左
+       用来拉开盒子与盒子之间的距离
+      */
+      margin: 5px 10px 2px 15px;
+
+      /* 
+        padding会撑大盒子
+        通过 box-sizing 来解决
+      */
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    盒模型由 margin border padding 内容组成
+   -->
+  <div>1</div>
+</body>
+
+</html>

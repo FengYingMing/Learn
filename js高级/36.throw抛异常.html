@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      1.throw抛出异常信息，程序也会终止执行
+      2.throw后面跟的是错误提示信息
+      3.Error对象配合throw使用，能够设置更详细的错误信息
+    */
+    function a() {
+      throw new Error('错了')
+      console.log('11222')
+    }
+    a()
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      position: relative;
+      overflow: auto;
+    }
+
+    h2 {
+      /* 
+        绝对定位：
+        1.脱标：不占位
+        2.参照物：先找最近的已经定位的祖先元素，如果所有祖先元素都没有定位，参照浏览器可视区改位置
+        3.显示模式特点改变：宽高生效(具备了行内块的特点)
+      */
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      background-image: url("./assest/1.jpg");
+      opacity: 0.5;
+      background-size: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>11111111111111111111111111111111111111111111111111111</h1>
+    <h2></h2>
+  </div>
+</body>
+
+</html>

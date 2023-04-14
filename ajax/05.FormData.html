@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="file" id="ipt" multiple>
+  <script>
+    /*
+      FormData是一个构造函数，new FormDara()即可得到FormData对象
+      创建一个空白的FormData对象，里面没有包含任何数据
+      const fd = new FormData()
+      调用FormData对象的append(键,值)方法，可以向空白的FormData中追加键值对数据，其中：
+        键表示数据项的名字，必须是字符串
+        值表示数据项的值，可以是任意类型的数据
+    */
+    document.getElementById('ipt').addEventListener('change', function (e) {
+      console.log(e.target.files)
+      const fd = new FormData()
+      fd.append('files', e.target.files)
+    })
+  </script>
+</body>
+
+</html>

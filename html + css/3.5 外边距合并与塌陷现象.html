@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div1 {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      margin-bottom: 50px;
+    }
+
+    .div2 {
+      width: 100px;
+      height: 100px;
+      background-color: lime;
+      margin-top: 100px;
+    }
+
+    .div3 {
+      margin-top: 100px;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 0, 34);
+    }
+
+    .div4 {
+      margin-top: 50px;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(43, 0, 255);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 合并现象：垂直排列的兄弟元素，上下margin会合并，取margin较大的那个 -->
+  <!-- 
+       塌陷问题：父子级的标签，子级的添加上外边距会产生塌陷问题，会导致父级一起向下移动
+       解决方法：取消子级的margin，用父级的padding替代
+   -->
+  <div class="div1"></div>
+  <div class="div2"></div>
+
+  <div class="div3">
+    <div class="div4"></div>
+  </div>
+</body>
+
+</html>

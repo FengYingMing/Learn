@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 常用伪元素选择器 ::before在后 ::after在前 */
+    /* 
+     特性:
+     必须设置content:""属性,用来设置伪元素的内容,如果没有内容,就用空""
+     伪元素默认是行内显示模式
+     权重和标签选择器相同
+   */
+    div::after {
+      width: 100px;
+      height: 100px;
+      display: block;
+      content: "111";
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div>1</div>
+</body>
+
+</html>

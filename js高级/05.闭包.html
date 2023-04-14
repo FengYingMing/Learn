@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+     闭包：指 有权访问到另一个函数作用域内变量 的函数
+     优点：封闭数据，实现数据私有，防止数据受到污染，同时外部也可以访问函数内部的变量
+     缺点：闭包 有可能 导致内存泄漏(函数访问了外部函数作用域的变量，如果没访问不会造成内存泄漏)
+
+
+     例如：
+      function outer(){
+      const a = 1
+      function inner(){
+        return a
+      }
+      return inner
+     }
+     let fn = outer()
+     console.log(fn())
+     
+     应用：实现数据的私有
+     需求：
+      统计函数被调用了几次
+      写法1：缺陷就是由于i是全局变量，如果被其他地方使用，会导致统计出来的次数就会不准确
+            let i = 0
+            function fn(){
+              i++
+              return (i+"次")
+            }
+            console.log(fn())
+
+      写法2：闭包写法，这样在外层包裹一个函数后就可以防止i被污染
+          function outer() {
+           let i = 0
+           function fn(){
+             i++
+             return i+"次"
+           }
+            return fn
+          }
+          console.log(outer()())
+
+    */
+    
+let [a,b] = [1,2]
+console.log(a,b)
+
+
+
+  </script>
+</body>
+
+</html>

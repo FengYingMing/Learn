@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* 清除浮动：子级浮动，父级没有高度，子级无法撑开父级高度,影响布局效果 */
+    /* 清除浮动方法1 ：额外标签法 在浮动元素末尾添加一个空的标签，设置属性 clear:both */
+    /* 
+       清除浮动方法2 ：单伪元素清除法 父元素添加伪类元素 
+                       .father::after{
+                          content:'',
+                          display:block,
+                          clear:both
+                        }
+    */
+    /* 
+        清除浮动方法3 ：双伪元素标签法
+                      .father::before
+                      .father::after{
+                        content:"",
+                        display:table
+                      }
+                      .father::after{
+                        clear:both
+                      }
+        
+    */
+    /* 清除浮动方法4 ： 父元素overflow:hidden*/
+
+    ul li {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      float: left;
+      margin-left: 10px;
+    }
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: lime;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 浮动的元素是脱标的如果父级没给高度，会造成下面的标准元素位置异常 -->
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div></div>
+</body>
+
+</html>

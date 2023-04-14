@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //---------------------------Promise介绍
+    /*
+      1.Promise是个构造函数
+      2.Promise有三种状态
+          pending(进行中)
+          fulfilled(成功，已完成) 
+          reject(失败，未完成
+    
+    
+    
+    
+    
+    
+    
+    
+    */
+
+
+
+    // ------------------------------基本使用
+    // 1.创建promise对象
+    const p = new Promise(
+      (resolve, reject) => {
+        //promise内部一般可以封装一个异步操作
+        //resolve，reject是promise内部提供好的两个函数
+        //成功调用resolve
+        //失败调用reject
+
+        console.log(1) //此时Promise状态为 pending
+
+        resolve('成功的结果') //此时Promise状态为 fulfilled
+
+        reject('失败的结果') //此时Promise状态为 rejected
+
+      }
+    )
+    //2.使用promise对象
+    p.then((res) => {
+      console.log(res) //'成功的结果'   返回成功的值
+    }).catch((err) => {
+      console.log(err) //'失败的结果'   捕获失败的值
+    })
+  </script>
+</body>
+
+</html>

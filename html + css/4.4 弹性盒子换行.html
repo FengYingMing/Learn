@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* 弹性盒子可以自动挤压或者拉伸，默认情况下，所有的弹性盒子都在一行显示 */
+    /* 
+       可以通过 flex-wrap:wrap来进行换行
+       
+    */
+    ul {
+      display: flex;
+      width: 500px;
+      height: 200px;
+      border: 1px solid black;
+      flex-wrap: wrap;
+    }
+
+    li {
+      width: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</body>
+
+</html>

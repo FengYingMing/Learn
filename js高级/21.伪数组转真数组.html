@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 伪数组转换为真数组 三个方法
+
+
+    //
+    let arr
+    function fn() {
+      //1.通过Object.values 伪数组其实是个对象,可以用该方法
+      // arr = Object.values(arguments)
+
+      //2.通过Array.from() 
+      // arr = Array.from(arguments)
+
+      //3.通过...
+         arr = [...arguments]
+    }
+    fn(1, 2, 3)
+    console.log(arr)
+
+  </script>
+</body>
+
+</html>

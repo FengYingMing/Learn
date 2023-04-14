@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="ipt">
+  <script>
+    // 防抖：单位时间内,频繁触发事件，只执行最后一次
+    // 1.通过lodash库  _.debounce(fn,500)
+    /*
+      2.手写 核心思路 闭包
+             声明一个延时器变量
+             判断需要执行的函数，有延时器就先清除之前的
+             没有延时器则开启延时器，存到变量中
+             在定时器里面执行需要执行的函数
+    */
+    const ipt = document.getElementById('ipt')
+    function fn() {
+      console.log(123)
+    }
+    function debounce(fn, time) {
+      // 利用闭包保持变量值
+      let a
+      return function () {
+        console.log(a)
+        if (a) {
+          clearTimeout(a)
+        }
+        a = setTimeout(fn, time)
+      }
+
+    }
+    ipt.addEventListener('input', debounce(fn, 500))
+  </script>
+</body>
+
+</html>

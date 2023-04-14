@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+     1.将预估可能发生错误的代码写在try代码段中
+     2.如果try代码中出现错误，会执行catch代码段，捕获到错误信息
+     3.finally不管是否有错误，都会执行
+    */
+    try {
+      console.log(a)
+    } catch (err) {
+      console.log(err)
+      throw err
+    } finally {
+      console.log('我依旧执行')
+    }
+  </script>
+</body>
+
+</html>

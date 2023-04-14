@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+     1.js数据类型分为几类，分别是？
+     
+     答：分为基本数据类型和引用数据类型。 共八种
+         基本数据类型： 
+         number(数字) string(字符串) null(表示尚未创建的对象)
+         undefined(未赋值的变量) boolean(真假) 
+         bigInt：
+          let a = BigInt(1000000000000000000) 不需要new
+          或者
+          let b = 100000000000000000000n 直接带上n
+          https://www.51cto.com/article/709603.html
+          操作大整数 
+          场景：
+          高精度时间戳
+          大于 2^53 - 1 的整数的一个应用场景就是高精度时间戳。精确到纳秒级别的时间戳很常见，经常用来记录特定程序的执行事件，以便进行性能分析，BigInt 可以表示高精度时间戳，在后端性能分析、性能调优中发挥作用。
+  
+          大整数 ID
+          比如 Twitter 的 id 生成服务，当 id 持续增长时，就会超出 JS 的安全范围，因此要求同时冗余地返回字符串型的 id。假如有 BigInt 类型就可以直接使用。
+
+         symbol：
+          let b = Symbol() 不需要new
+
+          https://blog.csdn.net/qq_41583484/article/details/108390882
+          表示独一无二的值 
+          场景一:用在对象中来声明某个特殊的key值
+          场景二：一个类中的私有属性
+         
+         
+         
+         引用数据类型： object
+    */
+
+
+
+    /*
+      2.数字类型有哪些算数运算符?
+  
+  
+      答：+ - * / %(取余，通常用于判断一个数字能否被另一个数字整除 8 % 4 = 0)
+    */
+
+
+
+    /*
+      3.数字类型中的NaN是什么？
+  
+  
+      答：表示一种计算错误，得出来的值不是一个数字，比如 'a' + 1 = NaN
+  
+    */
+
+
+    /*
+      4.模板字符串
+  
+  
+      答：
+        let a = `我今年${1+1}岁`
+        console.log(a) -- 我今年2岁
+    
+    */
+
+    /*
+      5.检测数据类型
+      
+      答：
+        typeof a  --运算符形式
+        typeof(a) -- 函数形式
+  
+      例：
+        let b
+        let c = function(){}
+        console.log(typeof 1,typeof '1',typeof true,typeof b,typeof null,typeof NaN,typeof {a:1},typeof c)
+        // number string boolean undefined object number object function
+    */
+
+    /*
+      6.隐式转换 和 显式转换 概念
+        
+      答： 
+          隐式转换：在运算过程中js会把变量自动转换为数字类型，不过有特殊情况 变量 + 字符串 的话 是拼接
+          显式转换：Number('1') 转换成数字1 , parseInt(1.1) 转换为整数1 , parseFloat('1.2')可以保留小数1.2
+    
+    */
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (width:320px) {
+      html {
+        font-size: 32px;
+      }
+    }
+
+    @media (width:375px) {
+      html {
+        font-size: 37.5px;
+      }
+    }
+
+    .box {
+      /* 如果设计师给的375的设计稿，量出来px，用 px值/37.5 ，就是rem值 */
+      width: 5rem;
+      height: 3rem;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+   原理媒体查询，根据不同视口宽度给根节点设置不同font-size
+   rem相对单位
+   rem单位是相对于html标签的字号计算结果
+   1rem = 1HTML字号大小
+  -->
+  <div class="box"></div>
+
+  <!-- 不用自己写，引入flexible.js即可实现 -->
+  <script src="./flexible.js"></script>
+</body>
+
+</html>

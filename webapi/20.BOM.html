@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //window 是浏览器内置的全局对象
+    //window 对象下包含了 navigator location doucument history screen 5个属性,即所谓的BOM
+    //document是实现DOM的基础,它其实是依附于window的属性
+    //注:依附于window对象的所有属性和方法,使用时可以省略window
+
+    //1.location对象:
+    //通过href属性获取完整的url地址,对其赋值赋值时会实现地址跳转
+    //  location.href = 'http://www.ba1idu.com?username=1'
+    console.log(location.href)
+    //通过search属性获取查询字符串(url中?以及后面的值)
+    console.log(location.search)
+    //通过hash属性获取地址中的哈希值,符号#以及后面的部分
+    console.log(location.hash)
+    //通过reload方法可以刷新页面,加个true为参数的话就是清楚缓存,相当于 ctrl+F5
+    //  location.reload()
+
+    //2.navigator对象:用于检测浏览器信息的
+    console.log(navigator.userAgent)
+
+    //3.history对象:用于前进后退页面
+    // history.forword() //前进
+    // history.back() //后退
+    // history.go(参数) //参数 0就是当前,1就是前进1,-1就是后退1
+  </script>
+</body>
+
+</html>

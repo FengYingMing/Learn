@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  /*
+    reduce 返回累计处理数组的结果 常用于求和
+    arr.reduce( ( 累计值，当前元素 , 索引 )=>{}  , 累计的起始值)
+
+    累计值参数：
+    1.如果有起始值，则以起始值为准开始累积，累计值 = 起始值
+    2.如果没有起始值，则累计值以数组的第一个数组元素作为起始值开始累计
+    3.后面每次遍历就会用后面的数组元素累计到累计值里面(类似求和里面的sum)
+  */  
+
+  const arr = [1,2,3]
+
+  const sum = arr.reduce((p,v,i)=>p+v)
+  
+  console.log(sum)
+  </script>
+</body>
+</html>

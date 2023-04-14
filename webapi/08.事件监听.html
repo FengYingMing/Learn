@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="btn">按钮</button>
+  <script>
+    const btn = document.getElementById('btn')
+    function fn() {
+
+    }
+    // 1.通过addEventListener
+    btn.addEventListener('click', fn)
+    // 2.通过 onXXX
+    btn.onclick = fn
+
+    /*
+      区别在于：
+      on方式同名事件会被覆盖,addEventListener则不会
+    */
+
+    // 移出事件监听
+    btn.removeEventListener('click', fn)
+    btn.onclick = null
+
+  </script>
+</body>
+
+</html>

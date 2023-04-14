@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .fs {
+      color: lime;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="dv">1</div>
+  <script>
+    const dv = document.getElementById('dv')
+    //1. 通过 style 属性 
+    dv.style.width = '100px'
+    dv.style.height = '100px'
+    dv.style.backgroundColor = 'pink'
+    //2. 通过 className 属性
+    dv.className = 'fs'
+    //3. 通过 classList 操作
+    // 新增类名
+    dv.classList.add('类名')
+    // 移出类名
+    dv.classList.remove('类名')
+    // 
+    dv.classList.toggle('类名')
+  </script>
+</body>
+
+</html>

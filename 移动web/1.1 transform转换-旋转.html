@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .fa {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+    }
+
+    .son {
+      width: 100px;
+      height: 100px;
+      background-color: lime;
+      transition: all 2s;
+    }
+
+    .fa:hover .son {
+      /* 
+        旋转角度 rotate(xxdeg)
+        正值顺时针 
+        负值逆时针
+      */
+      transform: translate(100px, 200px) rotate(50deg);
+      /* 
+        设置旋转原点
+        transform-origin: 原点水平位置 原点垂直位置;
+        取值：
+            left top right bottom center
+            像素单位数值
+            百分比
+      */
+      transform-origin: 10% 50%;
+      /* transform: translate(100px, 200px); */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fa">
+    <div class="son"></div>
+  </div>
+</body>
+
+</html>

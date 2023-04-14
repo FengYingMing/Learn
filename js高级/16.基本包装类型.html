@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    引出问题：为何基本数据类型也有属性和方法呢？比如
+     const str = 'hello'
+     console.log(str.length)
+
+     回答：const str = 'hello' 的过程中，
+          js底层是通过构造函数把简单数据类型包装成了引用数据类型
+          const str = new String('hello')
+          所以str自带有属性和方法
+
+          Number Boolean String  就是基本包装类型
+
+
+      注意：引用类型与基本包装类型的主要区别就是对象的生存期
+           使用 new 操作符创建的引用类型的实例，在执行流离开当前作用域之前都一直保存在内存中。
+           而自动创建的基本包装类型的对象，则只存在于一行代码的执行瞬间，然后立即被销毁。
+           这意味着我们不能在运行时为基本类型值添加属性和方法
+
+           https://blog.csdn.net/weixin_41350225/article/details/87732511?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-87732511-blog-84962542.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-87732511-blog-84962542.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=1
+           
+    */
+  </script>
+</body>
+
+</html>

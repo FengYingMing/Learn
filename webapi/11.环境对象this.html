@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      1.全局环境：this指向window
+    */
+    console.log(this) //window
+
+    /*
+      2.普通函数：this指向window
+    */
+    function a() {
+      console.log(this) //window
+    }
+    a() //相当于window.a()
+
+    /*
+      3.对象方法：指向当前对象
+    */
+    const obj = {
+      a: function () {
+        console.log(this) //obj
+      }
+    }
+    obj.a()
+
+    /*
+      4.事件:指向事件源
+    */
+    const btn = document.getElementById('btn')
+    btn.addEventListener('click', function () {
+      console.log(this) //btn
+    })
+  </script>
+</body>
+
+</html>

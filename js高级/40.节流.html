@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      color: #fff;
+      text-align: center;
+      line-height: 200px;
+      font-size: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="dv">1</div>
+  <script>
+    // 节流：单位时间内，频繁触发事件，只执行一次
+    // 使用场景：鼠标移动mousemove,页面尺寸缩放 resize,滚动scroll等等
+    // 可以通过lodash库  _.throttle(fn,500)
+    /* 核心思路：
+       1.声明一个定时器变量
+       2.当事件触发判断是否有定时器了，如果有定时器则不开启新定时器
+       3.如果没有定时器则开启定时器，存到变量里
+         --定时器里面执行的函数
+         --定时器里面要把定时器清空
+    */
+    function throttle(fn, time) {
+      let a
+      return function () {
+        if (!a) {
+          a = setTimeout(() => {
+            fn()
+            clearTimeout(a)
+            a = null
+          }, time)
+        }
+      }
+    }
+    function fn() {
+      document.getElementById('dv').innerHTML = +document.getElementById('dv').innerHTML + 1
+    }
+    document.getElementById('dv').addEventListener('mousemove', throttle(fn, 3000))
+
+
+  </script>
+</body>
+
+</html>

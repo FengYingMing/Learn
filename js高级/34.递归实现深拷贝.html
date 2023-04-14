@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 超详细深拷贝 https://www.cnblogs.com/vigourice/p/15913633.html
+    const obj =[
+      1,
+      {a:{
+        b:3
+      }},
+      [1,2,3]
+    ]
+
+    function deepClone(obj) {
+      const type = Object.prototype.toString.call(obj)
+      console.log(type)
+      if (type === '[object Array]' || type === '[object Object]') {
+        const newObj = {
+          '[object Array]':[],
+          '[object Object]':{}
+        }[type]
+        for (let key in obj) {
+          console.log(obj[key])
+          if (typeof obj[key] === 'object') {
+            newObj[key] = deepClone(obj[key])
+          } else {
+            newObj[key] = obj[key]
+          }
+        }
+        return newObj
+      }else{
+        return obj
+      }
+
+    }
+    const copyObj = deepClone(obj)
+    console.log(copyObj)
+    console.log(copyObj[2]=== obj[2])
+  </script>
+</body>
+
+</html>

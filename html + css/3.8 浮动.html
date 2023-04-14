@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 浮动：
+       1.浮动后盒子顶对齐
+       2.浮动后的盒子具备行内块特点
+       3.父级宽度不够，浮动的自己换行
+       4.浮动后的盒子脱标
+    */
+    .dv1 {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      /* 两个都要加浮动，如果只有一个加了会出现脱标现象，飘在标准流上方 */
+      float: left;
+    }
+
+    .dv2 {
+      width: 100px;
+      height: 100px;
+      background-color: lime;
+      /* 两个都要加浮动 */
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dv1">1</div>
+  <div class="dv2">2</div>
+</body>
+
+</html>

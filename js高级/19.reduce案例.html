@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      需求：
+      1.给员工每人涨薪30%
+      2.然后计算需要支出的费用
+    */
+    const arr = [
+      {
+        name: '张三',
+        salary: 1000
+      },
+      {
+        name: '李四',
+        salary: 2000
+      },
+      {
+        name: '王五',
+        salary: 3000
+      },
+    ]
+    const sum = arr.reduce((p,v)=>{
+      v.salary = v.salary + v.salary*0.3 
+      return p + v.salary
+    },0)
+    /*
+      内部运行机制
+      p = 0
+      v.salary = v.salary + v.salary*0.3
+      p = p + v.salary
+    */ 
+    console.log(arr,sum)
+  </script>
+</body>
+
+</html>

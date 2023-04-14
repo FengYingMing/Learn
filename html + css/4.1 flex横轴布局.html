@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      /* 居中 */
+      justify-content: center;
+      /* 最左 中 最右 */
+      justify-content: space-between;
+      /* 盒子左中右两边距离对等 */
+      justify-content: space-around;
+      /* 每个盒子与边界之间距离对等 */
+      justify-content: space-evenly;
+    }
+
+    div div {
+      width: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+</body>
+
+</html>

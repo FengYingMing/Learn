@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      git init : 初始化仓库，生成一个隐藏文件夹 .git
+      git三个区 ：工作区 -> 暂存区 -> 仓库区
+                  工作区：书写代码的地方，工作目录
+                  暂存区：暂存提交代码的地方
+                          git无法直接从工作区提交到仓库区，必须先经过暂存区
+                  仓库区：代码永久存储区,每次存入git仓库后，会生成版本号，可以回退到任意一个具体版本
+      git reset : 取消暂存
+      git reset --hard 版本号 ：回退至任意版本
+      git reset --hard~1 : 将版本回退到上一次提交
+      git reflog : 可以查看所有的版本信息
+
+      git忽视文件 仓库中创建.gitignore文件:
+                 写法注意：
+                       #表示注释
+
+                       # 忽视idea.text文件
+                        idea.text
+                       # 忽视css下的index.js文件
+                        css/index.js
+                       # 忽视css下所有的js文件
+                        css/*.js
+                       # 忽视css文件夹
+                        css
+
+      git branch xxx :创建xxx分支
+      git branch :查看分支
+      git checkout xxx ：切换到xxx分支
+      git merge xxx : 合并xxx分支到当前分支
+      git branch -d xxx :删除xxx分支
+      git checkout -b xxx :创建并进入到xxx分支
+                      
+    */
+  </script>
+</body>
+
+</html>

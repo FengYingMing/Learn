@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    1.click 点击事件
+    2.mouseenter 鼠标经过事件
+    3.mouseleave 鼠标离开事件
+    (mouseover 和 mouseout 会有冒泡情况)
+    4.focus 获得焦点事件(  如果要自动获取焦点 dom对象.focus()  )
+    5.blur 失去焦点事件
+    6.keydown 键盘按下
+    7.keyup 键盘抬起
+    8.input 文本事件(表单内value值发生变化是触发)
+   -->
+  <div id="dv1">1</div>
+  <input type="text" id="ipt1">
+  <script>
+    const dv1 = document.getElementById('dv1')
+    const ipt1 = document.getElementById('ipt1')
+
+    dv1.addEventListener('click', function () {
+      console.log(1)
+    })
+    dv1.addEventListener('mouseenter', function () {
+      console.log(2)
+    })
+    dv1.addEventListener('mouseleave', function () {
+      console.log(3)
+    })
+
+    ipt1.addEventListener('focus', function () {
+      console.log(4)
+    })
+    ipt1.addEventListener('blur', function () {
+      console.log(5)
+    })
+    ipt1.addEventListener('keydown', function () {
+      console.log(6)
+    })
+    ipt1.addEventListener('keyup', function () {
+      console.log(7)
+    })
+    ipt1.addEventListener('input', function () {
+      console.log(8)
+    })
+  </script>
+</body>
+
+</html>

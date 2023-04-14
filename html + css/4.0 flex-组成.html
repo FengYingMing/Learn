@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      设置方式：给父元素设置 display:flex,子元素可以自动挤压或者拉伸
+      组成部分：
+        弹性容器(父级)
+        弹性盒子(主轴水平方向 子级，如果所有子级宽度超过父级,会自动拉伸,高度如果不设置,默认值是父级高度，宽度如果不设置，默认由内容撑开)
+        主轴：默认在水平方向,可以通过 flex-direction:column切换垂直
+        侧轴/交叉轴:默认在垂直方向
+        
+     */
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      display: flex;
+      width: 1000px;
+      height: 500px;
+      background-color: pink;
+    }
+
+    li {
+      width: 100%;
+      margin-left: 10px;
+      background-color: lime;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+</body>
+
+</html>

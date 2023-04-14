@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="../node_modules/axios/dist/axios.min.js"></script>
+  <script>
+    // get基本用法
+    axios({
+      method: 'get',
+      // get支持查询字符串拼接写法和下面的写法一样
+      // url: 'http://www.liulongbin.top:3009/api/getbooks?id=1&name=吴承恩',
+      url: 'http://www.liulongbin.top:3009/api/getbooks',
+      params: {
+        //放在查询参数中
+        id: 1,
+        name: '吴承恩'
+      }
+      // data无效，get请求没有请求体
+    }).then(res => {
+      // 请求成功才执行该函数
+      console.log(res)
+    })
+
+    // post请求
+    axios({
+      method: 'post',
+      url: 'http://www.liulongbin.top:3009/api/getbooks',
+      // params也支持，但是一般适用于get
+      // params:{},
+      data: {
+        // 在请求体中，浏览器通过Payload查看
+        name: 'aa'
+      }
+    }).then(res => {
+      console.log(res)
+    })
+
+
+    //axios别名写法
+    axios.get('xxx', {
+      params: {
+        a: 1,
+        b: 2
+      },
+      responseType: 'blob'
+    })
+
+    axios.post('xx', {
+      a: 1,
+      b: 2
+    }, {
+      params: {
+
+      },
+      responseType: 'blob'
+    })
+  </script>
+</body>
+
+</html>

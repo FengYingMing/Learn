@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.有时候需要把资源全部处理完后做一些事情
+    // 通过给window绑定load事件
+    window.addEventListener('load', function () {
+      console.log('页面html,css,图片,js等资源加载完了')
+    })
+
+    // 2.有时候只需要加载html资源，不需要其他资源，如css,图片
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('HTML文档加载完毕DOM')
+    })
+  </script>
+</body>
+
+</html>

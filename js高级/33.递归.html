@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+     递归
+     如果一个函数在内部可以调用其本身，那么这个函数就是递归函数
+     递归函数要给出退出条件，不然会造成死递归
+    */
+    //1.简单的递归
+    // let i = 0
+    // function fn() {
+    //   console.log(i)
+    //   i++
+    //   if (i > 6) {
+    //     return
+    //   }
+    //   fn()
+    // }
+    // fn()
+
+    //2.利用递归函数实现setTimeout模拟setInterval效果
+    function fn() {
+      console.log(new Date().toLocaleString())
+      setTimeout(fn, 1000)
+    }
+    fn()
+  </script>
+</body>
+
+</html>

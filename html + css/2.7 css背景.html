@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 500px;
+      height: 500px;
+      /* 背景色 */
+      background-color: pink;
+
+      /* 背景图 */
+      background-image: url("./assest/1.jpg");
+
+      /* 背景图平铺方式   浏览器默认平铺(图片会变成多个去塞满整个div)，一般设置不平铺*/
+      background-repeat: no-repeat;
+
+      /* 背景图位置 */
+      /* 单词 第一个参数 水平位置(left center right)  第二个参数 垂直位置(top center bottom) */
+      /* 数值(支持复数) 第一个参数 水平位置(-10px)  第二个参数 垂直位置(10px) */
+      /* 单词和数值支持一起 */
+      background-position: left 0px;
+
+      /* 背景图缩放 100%塞满整个div*/
+      background-size: 100%;
+
+      /* 背景图固定 网页大屏滚动，图片不动*/
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>

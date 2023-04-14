@@ -1,0 +1,21 @@
+// 5.引入样式文件
+@import './1.52\ 所要导入的less.less';
+
+// 4.定义整体颜色变量
+@colorPink:pink;
+// 5.定义rem值或者vh/vw值，用于通用
+@rootSize: 37.5;
+
+div{
+  // 1.支持计算，注意除法要加括号
+  width: (300px/1.85) + 50px;
+
+  // 2.支持嵌套
+  .son{
+    // 3.son的伪类选择器写法
+    &:hover{
+      color: @colorPink;
+    }
+  }
+  
+}

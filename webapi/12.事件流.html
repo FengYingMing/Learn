@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+     事件流指的是事件完整执行过程中的流动路径
+     当触发事件时，会经历两个阶段，分别是捕获阶段和冒泡阶段
+
+     事件捕获：
+     当一个元素的事件被触发时，会从dom的根元素开始依次调用同名事件(从外到里)
+
+     事件冒泡：
+     当一个元素的事件被触发时，同样的事件将会在该元素的所有祖先元素中依次被触发
+     阻止事件冒泡：事件对象e的stopPropagation方法
+
+     事件委托：原本要注册在子元素的事件委托给父元素，让父元素担当事件监听的职务
+              用于给多个元素注册事件，还需要利用循环多次注册事件的情况
+              原理:利用事件冒泡的特点
+              
+    -->
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      对象原型 __proto__ (注意有两条下划线__)
+      对象都会有一个属性__proto__(在浏览器打印的时候是 [[prototype]])指向构造函数的prototype原型对象，之所以
+      对象可以使用构造函数prototype原型对象的属性和方法，就是因为对象有 __proto__原型的存在
+      __proto__对象中也有constructor属性，指向创建该实例对象的构造函数
+    */
+    function People(name) {
+      this.name = name
+    }
+    const ldh = new People('刘德华')
+    console.log(ldh.__proto__ === People.prototype) //true
+    console.log(ldh.__proto__.constructor === People) //true
+  </script>
+</body>
+
+</html>

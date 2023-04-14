@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      Promise 解决回调地狱
+      如果上一个.then()方法中return了一个新的Promise，就可以通过下一个.then进行处理
+    */
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('成功1')
+      }, 1000)
+    }).then(res => {
+      console.log(res)
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve('成功2')
+        })
+      })
+    }).then(res => {
+      console.log(res)
+    })
+
+    /*
+      封装Promise
+    */
+    function fn(time, msg) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(msg)
+        }, time)
+      })
+    }
+    fn(1000, '成功1').then(res => {
+      console.log(res)
+      return fn(2000, '成功2')
+    }).then(res => {
+      console.log(res)
+    })
+  </script>
+</body>
+
+</html>

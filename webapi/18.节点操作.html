@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li></li>
+    <li></li>
+  </ul>
+  <script>
+    // 查询父节点 子节点.parentNode
+    // 查询子节点 父节点.children(返回伪数组)
+    // 查询下一个兄弟节点 节点.nextElementSibling
+    // 查询上一个兄弟节点 节点.previousElementSibling
+    // 创建新节点,如a标签  document.createElement('标签名')
+    const link = document.createElement('a')
+    // 塞入body标签中最后
+    document.body.append(link)
+    // 塞入body标签的最前
+    document.body.prepend(link)
+    // 删除节点
+    document.body.remove(link)
+  </script>
+</body>
+
+</html>

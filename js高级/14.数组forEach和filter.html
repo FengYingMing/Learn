@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let arr1 = [11, 22, 33, 44]
+    //纯粹遍历，没有返回值的
+    arr1.forEach((v, i) => {
+      console.log(v,i)
+    })
+    
+    //filter是筛选出满足条件的
+    console.log(arr1.filter(v=>v>22))
+  </script>
+</body>
+
+</html>

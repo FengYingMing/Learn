@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      定义正则：
+      const reg = /表达式/
+      其中//是正则表达式的字面量
+      正则表达式也是对象
+
+      使用正则：
+      test()方法 用来查看正则表达式与指定的字符串是否匹配
+      成功返回 true
+      失败返回 false
+
+      可以使用 any-rule插件，右击最上面
+    */
+    //字符串全局替换
+    const str = 'aabbcc'
+    console.log(str.replace(/bb/g, 'dd'))
+  </script>
+</body>
+
+</html>

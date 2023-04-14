@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 标题标签 -->
+  <h1>1</h1>
+
+  <!-- 段落标签 -->
+  <p>2</p>
+
+  <!-- 换行标签 -->
+  3<br />3
+
+  <!-- 水平线 -->
+  <hr />
+
+  <!-- 图像标签 -->
+  <!-- 
+      src属性：图片路径
+      alt属性：图片无法显示的时候显示的文字
+      title属性:鼠标悬停在图片上的时候显示的文字
+     -->
+  <img src="./\/assest/1.jpg" alt="1" title="2" />
+
+  <!-- 超链接标签 -->
+  <!-- 
+      href:跳转链接(可以跳本地文件链接，也可以调网址)，#表示空连接
+      target:跳转方式  _self当前网页跳转 _target新建网页跳转
+     -->
+  <a href="https://www.baidu.com/" target="_self">当前网页跳转百度</a>
+  <a href="https://www.baidu.com/" target="_target">新网页跳转百度</a>
+  <a href="#">空链接</a>
+
+  <!-- 列表标签 -->
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+
+  <!-- 表格标签 -->
+  <!-- 
+      标签：
+      table表格整体
+      tr表行
+      td每行内容
+      属性：
+      上下两行合并 td设置属性rowspan="2"
+      左右两列合并 td设置属性colspan="2"
+     -->
+  <table border="1">
+    <tr>
+      <td>1</td>
+      <td rowspan="2">11</td>
+      <td>111</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <!-- <td>22</td> -->
+      <td>222</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td colspan="2">33</td>
+      <!-- <td>333</td> -->
+    </tr>
+  </table>
+
+  <!-- input标签 -->
+  <!-- 
+      type属性不同，则功能不同：
+      text:文本输入
+      password:密码框
+      radio:单选框
+      checkbox:多选框
+      file:上传文件
+      disable:禁用
+      value:值
+
+      其他功能属性：
+      placeholder:占位符
+      name：单选需配合该属性才能实现
+      checked：默认选中(单选和多选都行)
+      mutiple: 对于file类型的多文件上传
+     -->
+  <input type="text" placeholder="请输入" />
+
+  <input type="password" />
+
+  <input type="radio" name="age" checked />14
+  <input type="radio" name="age" />16
+
+  <input type="checkbox" />
+
+  <input type="file" />
+
+  <!-- select标签 -->
+  <!-- 
+      下拉菜单标签，嵌套option标签
+      selected属性表示默认选中
+     -->
+  <select>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3" selected>3</option>
+  </select>
+
+  <!-- textarea标签 -->
+  <textarea></textarea>
+
+  <!-- label标签 -->
+  <!-- 
+      给表单标签作为说明使用，并且可以增加表单控件的点击范围
+      -->
+  <label>
+    <input type="radio">男
+  </label>
+
+  <!-- button标签 -->
+  <button>按钮</button>
+
+  <!-- div和span 布局标签 -->
+  <div>1</div>
+  <span>2</span>
+</body>
+
+</html>

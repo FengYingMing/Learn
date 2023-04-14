@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 对象解构
+    let { a, b, c } = { a: 1, b: 2, c: 3 }
+    console.log(a, b, c)
+
+    // 数组解构，可以快速的将数组中的元素批量赋值给另一批变量
+    let [d,e,f] = [1,2,3]
+    console.log(d,e,f)
+
+    // 面试题：不用第三方变量交换两个值
+    let j = 1
+    let k = 2
+    ;[k,j] = [j,k] //注意这里前面要加分号，因为js会认为是 2[h,g]连在一块的
+    console.log(j,k)
+  </script>
+</body>
+
+</html>
